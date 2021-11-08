@@ -271,9 +271,9 @@ public final class AerospikeExpressionParser {
             throw new UnsupportedOperationException();
         }
 
-        protected String visitLogicalBinaryExpression(LogicalBinaryExpression node, Void context) {
-            return this.formatBinaryExpression(node.getOperator().toString(), node.getLeft(), node.getRight());
-        }
+//        protected String visitLogicalBinaryExpression(LogicalBinaryExpression node, Void context) {
+//            return this.formatBinaryExpression(node.getOperator().toString(), node.getLeft(), node.getRight());
+//        }
 
         protected String visitNotExpression(NotExpression node, Void context) {
             return "(NOT " + this.process(node.getValue(), context) + ")";

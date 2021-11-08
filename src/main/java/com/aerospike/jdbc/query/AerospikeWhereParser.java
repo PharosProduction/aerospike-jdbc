@@ -154,13 +154,13 @@ public class AerospikeWhereParser {
             throw new UnsupportedOperationException("visitBindExpression");
         }
 
-        protected WhereExpression visitLogicalBinaryExpression(LogicalBinaryExpression node, Void context) {
-            WhereExpression exp = new WhereExpression();
-            exp.setOpType(OpType.fromOperator(node.getOperator().toString()));
-            exp.append(process(node.getLeft()));
-            exp.append(process(node.getRight()));
-            return exp;
-        }
+//        protected WhereExpression visitLogicalBinaryExpression(LogicalBinaryExpression node, Void context) {
+//            WhereExpression exp = new WhereExpression();
+//            exp.setOpType(OpType.fromOperator(node.getOperator().toString()));
+//            exp.append(process(node.getLeft()));
+//            exp.append(process(node.getRight()));
+//            return exp;
+//        }
 
         protected WhereExpression visitNotExpression(NotExpression node, Void context) {
             WhereExpression exp = new WhereExpression();
